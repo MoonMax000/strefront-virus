@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /_next/
+Allow: /_next/*.js
+Allow: /_next/*.css
+Allow: /_next/*.woff2
+Allow: /_next/*.png
+Sitemap: https://streaming.tyriantrade.com/sitemap.xml

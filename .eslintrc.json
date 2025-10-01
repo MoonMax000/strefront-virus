@@ -1,0 +1,42 @@
+{
+  "extends": [
+    "next/core-web-vitals",
+    "next/typescript",
+    "eslint:recommended",
+    "plugin:tailwindcss/recommended"
+  ],
+  "plugins": ["autofix", "unused-imports"],
+  "globals": {
+    "JSX": "readonly",
+    "React": "readonly"
+  },
+  "rules": {
+    "react/self-closing-comp": [
+      "error",
+      {
+        "component": true,
+        "html": true
+      }
+    ],
+    "no-unused-vars": "off",
+    "unused-imports/no-unused-imports": "error",
+    "unused-imports/no-unused-vars": [
+      "warn",
+      {
+        "vars": "all",
+        "varsIgnorePattern": "^_",
+        "args": "after-used",
+        "argsIgnorePattern": "^_"
+      }
+    ],
+    "tailwindcss/classnames-order": "off",
+    "tailwindcss/no-contradicting-classname": "warn",
+    "react/display-name": 0,
+    "no-restricted-imports": [
+      "warn",
+      {
+        "patterns": ["../"]
+      }
+    ]
+  }
+}

@@ -1,0 +1,181 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Primary Color */
+  --color-bg: #000000;
+  --color-darkCharcoal: #181a20;
+  --color-lavenderIndigo: #a06aff;
+
+  /* Supporting Color */
+  --color-moonlessNight: #23252d;
+  --color-onyxGrey: #313338;
+
+  /* Text Color */
+  --color-white: #ffffff;
+  --color-webGray: #808283;
+  --color-black: #000000;
+
+  /* Indication Color */
+  --color-mountainMeadow: #2ebd85;
+  --color-fieryRose: #ef454a;
+
+  /* Accent Color */
+  --color-orangePeel: #ffa800;
+  --color-cornflowerBlue: #6aa5ff;
+  --color-darkJungleGreen: #1c3430;
+  --color-darkSienna: #3a2127;
+  --color-gunpowder: #2e2744;
+  --color-regaliaPurple: #523a83;
+  --background: #000000;
+  --text: #ffffff;
+  --purple: #a06aff;
+  --gray: #b0b1b2;
+  --darckGray: #44484d;
+  --blackedGray: #1f2329;
+  --red: #ff5757;
+  --green: #6ab96e;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #000000;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--text);
+  background: var(--background);
+}
+
+input,
+textarea {
+  outline: none;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+textarea {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+textarea::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes ascene {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-ascene {
+  animation: ascene 0.2s;
+}
+
+.scrollbar::-webkit-scrollbar {
+  @apply block w-[6px];
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  @apply rounded-full bg-gray bg-opacity-40 transition-all hover:bg-opacity-60;
+}
+
+.scrollbar-small::-webkit-scrollbar {
+  @apply block w-[2px] h-[4px];
+}
+
+.scrollbar-small::-webkit-scrollbar-thumb {
+  @apply rounded-full bg-gray bg-opacity-40 transition-all hover:bg-opacity-60;
+}
+
+.video_without_controls::-webkit-media-controls-timeline {
+  display: none !important;
+}
+.video_without_controls::-webkit-media-controls {
+  display: none !important;
+}
+
+.video_without_controls::-webkit-media-controls-panel {
+  display: none !important;
+  -webkit-appearance: none;
+}
+
+.video_without_controls::-webkit-media-controls-play-button {
+  display: none !important;
+  -webkit-appearance: none;
+}
+
+.video_without_controls::-webkit-media-controls-start-playback-button {
+  display: none !important;
+  -webkit-appearance: none;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #ffffff !important;
+  border-radius: 8px; /* Rounded square buttons */
+  width: 6px !important;
+  height: 6px !important;
+  display: flex;
+  --swiper-navigation-size: 12px;
+  transition: all 0.3s ease;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  color: #ffffff; /* White icon on hover */
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 16px; /* Smaller arrow size */
+}
+
+/* Position navigation buttons outside the swiper */
+.swiper-button-prev {
+  left: 0;
+}
+
+.swiper-button-next {
+  right: 0;
+}
+
+/* Custom Pagination Bullets */
+.swiper-pagination {
+  position: static !important;
+}
+
+.swiper-pagination-bullet {
+  background: white !important; /* Gray for inactive bullets */
+  width: 8px;
+
+  height: 8px;
+  margin: 0 8px;
+  transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background: #a06aff !important;
+  opacity: 1;
+  width: 1px;
+  height: 1px;
+  transform: scale(1.2);
+}
+
+@layer components {
+  .container-card {
+    @apply border border-regaliaPurple rounded-[24px] max-w-[1340px] bg-[#0C101480] backdrop-blur-[100px];
+  }
+}
